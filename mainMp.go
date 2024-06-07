@@ -103,7 +103,6 @@ func main() {
 					cetakTugas(B, A, w)
 				}
 			}
-
 		}
 		if y == 6 {
 			fmt.Println("pilih data yang ingin anda hapus: \n1. nama\n2. tugas")
@@ -284,24 +283,24 @@ func editNama(P *tabInt, n int, x string) {
 	var datStr string
 	finds = cariNama(*P, n, x)
 	if finds != -1 {
-		fmt.Print("Msukan nama: ")
+		fmt.Print("Msukan nama / (-) jika data tidak ingin diubah: ")
 		fmt.Scan(&datStr)
 		if datStr != "-" {
 			P[finds].nama = datStr
 		}
-		fmt.Print("Masukan jobdesk: ")
+		fmt.Print("Masukan jobdesk /(-) jika data tidak ingin diubah: ")
 		fmt.Scan(&datStr)
 		if datStr != "-" {
 			P[finds].jobdesk = datStr
 		}
 
-		fmt.Print("Masukan Domisili: ")
+		fmt.Print("Masukan Domisili /(-) jika data tidak ingin diubah: ")
 		fmt.Scan(&datStr)
 		if datStr != "-" {
 			P[finds].domisili = datStr
 		}
 
-		fmt.Print("Masukan umur: ")
+		fmt.Print("Masukan umur /(0) jika data tidak ingin diubah: ")
 		fmt.Scan(&datInt)
 		if datInt != 0 {
 			P[finds].umur = datInt
@@ -314,53 +313,53 @@ func editTugas(P *tgsInt, q int, m string) {
 	var stringdata string
 	ketemu = cariTugas(*P, q, m)
 	if ketemu != -1 {
-		fmt.Print("Msukan Nama: ")
+		fmt.Print("Msukan Nama /(-) jika data tidak ingin diubah: ")
 		fmt.Scan(&stringdata)
 		if stringdata != "-" {
 			P[ketemu].namaP = stringdata
 		}
-		fmt.Print("Msukan tugas: ")
+		fmt.Print("Msukan tugas /(-) jika data tidak ingin diubah: ")
 		fmt.Scan(&stringdata)
 		if stringdata != "-" {
 			P[ketemu].tugas = stringdata
 		}
-		fmt.Print("Masukan Prioritas: ")
+		fmt.Print("Masukan Prioritas /(-) jika data tidak ingin diubah: ")
 		fmt.Scan(&stringdata)
 		if stringdata != "-" {
 			P[ketemu].prioritas = stringdata
 		}
 
-		fmt.Print("Masukan anggaran: ")
+		fmt.Print("Masukan anggaran /(0) jika data tidak ingin diubah: ")
 		fmt.Scan(&integer)
 		if integer != 0 {
 			P[ketemu].anggaran = integer
 		}
-		fmt.Print("Masukan tanggal: ")
+		fmt.Print("Masukan tanggal  /(0) jika data tidak ingin diubah: ")
 		fmt.Scan(&integer)
 		if integer != 0 {
 			P[ketemu].tanggal = integer
 		}
-		fmt.Print("Masukan bulan: ")
+		fmt.Print("Masukan bulan  /(0) jika data tidak ingin diubah: ")
 		fmt.Scan(&integer)
 		if integer != 0 {
 			P[ketemu].bulan = integer
 		}
-		fmt.Print("Masukan tahun: ")
+		fmt.Print("Masukan tahun  /(0) jika data tidak ingin diubah: ")
 		fmt.Scan(&integer)
 		if integer != 0 {
 			P[ketemu].tahun = integer
 		}
-		fmt.Print("Masukan tanggal deadline: ")
+		fmt.Print("Masukan tanggal deadline  /(0) jika data tidak ingin diubah: ")
 		fmt.Scan(&integer)
 		if integer != 0 {
 			P[ketemu].tanggalDl = integer
 		}
-		fmt.Print("Masukan bulan deadline: ")
+		fmt.Print("Masukan bulan deadline  /(0) jika data tidak ingin diubah: ")
 		fmt.Scan(&integer)
 		if integer != 0 {
 			P[ketemu].bulanDl = integer
 		}
-		fmt.Print("Masukan tahun deadline: ")
+		fmt.Print("Masukan tahun deadline  /(0) jika data tidak ingin diubah: ")
 		fmt.Scan(&integer)
 		if integer != 0 {
 			P[ketemu].tahunDl = integer
